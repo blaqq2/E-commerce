@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      padding: none;
+      border: none;
+      margin: 0;
+      display: grid;
+
+
+
+
+
+    }
+    li {
+      list-style-type: none;
+      height: 10px;
+      padding-bottom: 54px;
+      border-bottom: solid transparent;
+      margin-bottom:0;
+
+
+
+    }
+    li:hover {
+      border-bottom-color: hsl(26, 100%, 55%);
+      cursor: pointer;
+
+
+
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 400px;
+      height: 30px;
+      color: #848988;
+
+
+    }
+
+
+
+    #head1 {
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: inherit;
+      justify-content: space-between;
+
+
+
+
+
+    }
+    #head2 {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 2;
+
+    }
+
+    section {
+
+      width: 55em;
+      height: 40em;
+      top: 4em;
+      margin-top: 4em;
+      display: flex;
+      margin: auto;
+      position: relative;
+
+
+    }
+    #header {
+      /* display: flex; */
+      height: 5em;
+      align-self: center;
+      justify-self: center;
+      margin: 0 auto;
+      position: relative;
+       width: 69em;
+
+
+
+
+
+
+
+
+    }
+    #sneakers {
+      margin-left: 4em;
+      margin-top: 2.5em;
+
+
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6em;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h4 {
+      color: hsl(26, 100%, 55%);
+      opacity: 75%;
+    }
+
+    #btn {
+
+      color: hsl(26, 100%, 55%);
+      background-color: hsl(25, 100%, 94%);
+      border: none;
+      border-radius: 5px;
+      width: 40px;
+      height: 20px;
+      font-size: 15px;
+      text-align: center;
+      margin-left: 0.3em;
+
+
+
+    }
+    #span {
+      font-size: 21px;
+      border: none;
+    }
+    #span2 {
+      text-decoration: line-through;
+      color: gray;
+
+    }
+    #btn1 {
+      width: 7em;
+      height: 1em;
+      border-radius: 0.5em;
+      border: none;
+      padding: 12px;
+      background-color: hsl(223, 64%, 98%);
+      text-align: center;
+
+    }
+    #btn2 {
+      width: 15em;
+      height: 3em;
+      margin-left: 10px;
+      border-radius: 0.5em;
+      border: none;
+      background-color: hsl(26, 100%, 55%);
+      color: white;
+    }
+    #btn2:hover, #img1:hover, #img2:hover {
+      opacity: 75%;
+      cursor: pointer;
+    }
+    .img {
+      height: 80px;
+      border-radius: 0.5em;
+      border: 1px transparent;
+      padding: 0;
+      margin-top: 20px;
+
+
+    }
+    #preview {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+    }
+    #show1 {
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: hsl(0, 0%, 0%);
+      position: fixed;
+      left: 0%;
+      top: 0%;
+      /* margin-left: -100%;
+      margin-right: -100%; */
+      background-color: rgba(0, 0, 0, 75%);
+
+    }
+    #show2 {
+      visibility: hidden;
+      width:350px;
+      height: 250px;
+      z-index: 1;
+      background-color: white;
+      position: relative;
+      left: 68%;
+      top: -41em;
+      border-radius: 5px;
+      box-shadow: 2px 20px 27px 0px #848988;
+      /* 1px 0px 28px 0px #848988; */
+    }
+    #show {
+
+      align-self: center;
+      justify-self: center;
+
+      width: 35em;
+      height: 40em;
+      position: fixed;
+      left: 50%;
+      top: 10%;
+      margin-left: -12.5em;
+      margin-right: -20em;
+
+    }
+
+    .img:hover {
+      border: 2px solid hsl(26, 100%, 55%);
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    #img1 {
+      float: left;
+      margin-top: -3.2px;
+      background-color: transparent;
+      border: none;
+
+
+    }
+    #img2 {
+      float: right;
+      background-color: transparent;
+      border: none;
+
+    }
+    #input1 {
+      width: 1.5em;
+      align-self: center;
+      text-align: center;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+    }
+    #sap2 {
+      display: flex;
+      flex-direction: row;
+    }
+    #previous {
+      border-radius: 100%;
+      background-color:white;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      top: 40%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+
+    }
+    #next{
+      border-radius: 100%;
+      background-color:white;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      top: 40%;
+      margin-left: 89%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+    }
+    .img4{
+      height: 20px;
+
+
+    }
+    #wrap{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    #smg {
+      border-radius: 50%;
+      position: inherit;
+      width: 50px;
+      float: right;
+
+    }
+    #smg:hover {
+      border: solid 3px;
+      border-color: hsl(26, 100%, 55%);
+      cursor: pointer;
+    }
+    #post{
+      color: #848988;
+      margin-left: 12px;
+     top: -30px;
+      position: relative;
+
+
+    }
+    #post2 {
+      display: inline;
+      top: -30px;
+      position: relative;
+    }
+    #post1 {
+      color: #848988;
+      margin-left: 62px;
+      top: -30px;
+      position: relative;
+
+
+    }
+    #cartwrap {
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+    #secondimg{
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+    }
+    #btnx{
+      width: 15em;
+      height: 3em;
+      border-radius: 0.5em;
+      border: none;
+      background-color: hsl(26, 100%, 55%);
+      color: white;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+    }
+    #secondimgs {
+      height: 20px;
+      margin-left: 15px;
+      position: relative;
+      top: 25px;
+      float: right;
+
+    }
+
+    #cart1{
+      margin: 0;
+      text-align: center;
+      align-self: center;
+      margin-top: 15%;
+      margin-right: 0;
+
+    }
+    #notif {
+      visibility: hidden;
+      position: relative;
+    width: 20px;
+    height: 10px;
+    top: -15px;
+    left: -15px;
+    text-align: center;
+    padding: .5px 8px;
+    border-radius: 60%;
+    background: hsl(26, 100%, 55%);
+    color: white;
+
+    }
+    #fark{
+      display: none;
+    }
+    #prevnext{
+      display: none;
+    }
+    #display {
+      border-radius: 1em;
+    }
+    .head3{
+      width: 115px;
+    }
+    #park{
+      height: 20px;
+      margin-top: 16px;
+    }
+    #hide {
+      display: none;
+    }
+    p#cart1 {
+      margin: o auto;
+    }
+    @media (max-width:767px) {
+      section {
+        flex-direction: column;
+        width:100%;
+        /* height: 100%; */
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+        top: 0;
+
+      }
+      #hr{
+        margin: 0;
+        display: none;
+      }
+      #header{
+       width: 100%;
+       height: auto;
+       margin-left: 0;
+       left: 0;
+      }
+
+      #preview {
+        width: 45%;
+        display: none;
+
+      }
+      #display{
+        max-width: 100%;
+        border-radius: 0;
+
+      }
+      ul {
+        display:none;
+        flex-direction: column;
+        justify-content:unset;
+      }
+      #fark {
+        margin-right: 20px;
+        margin-top: 16px;
+        margin-left: 20px;
+
+        display: block;
+
+
+      }
+      #sark {
+        width: 200px;
+
+       height: 100%;
+       z-index: 1;
+       background-color: white;
+
+       position: fixed;
+       margin-top: 0;
+       padding-left: 40px;
+       padding-top: 25px;
+      }
+       li {
+        padding-bottom: 0;
+        margin-top: 30px;
+        border-bottom: none;
+
+      }
+      li :hover{
+        border-bottom-color:#848988;
+        cursor: none;
+      }
+      #head2 {
+        display: bloc;
+      }
+      #head3{
+        display: none;
+      }
+      html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+        box-sizing: border-box;
+      }
+      #sneakers{
+        margin-left: 20px;
+        margin-right: 20px;
+
+      }
+
+      #show1{
+        width: 0%;
+        display: none;
+
+      }
+      #show2{
+        left: 2.5%;
+        top: -35rem;
+        width: 95%;
+        height: 250px;
+
+      }
+      #sap2 {
+       flex-direction: column;
+
+      }
+      #btn2, #btn1{
+        width: inherit;
+        margin-left: 0;
+      }
+      #btn1 {
+        margin-bottom:20px ;
+      }
+      #preview {
+      width: inherit;
+      }
+      #head1 {
+        margin-top: 0;
+      }
+      #prevnext{
+      display: flex;
+      position: absolute;
+      top: 33%;
+      width: 405px;
+      max-width: 100%;
+      height: 50px;
+      flex-wrap: wrap;
+      }
+      #next{
+        margin-left: 85%;
+        top: 35%;
+        width: 35px;
+        height: 35px;
+      }
+      #previous{
+        margin-left: 5%;
+        top: 35%;
+        width: 35px;
+        height: 35px;
+      }
+      #span2{
+        float: right;
+      }
+      .head3{
+        width: 76px;
+        margin-right: 10px;
+      }
+      #smg{
+        width : 23px;
+        margin-top: 15px;
+      }
+      #park{
+        height: 15px;
+      }
+      #hide {
+        display: flex;
+        width: 10px;
+      }
+      #cartwrap {
+        padding: 5px;
+      }
+
+
+    }
+
+  </style>
+</head>
+<body>
+   <header id="header">
+       <div id="head1">
+        <div id="head2">
+          <span id="fark"><img src="../ecommerce-product-page-main/images/icon-menu.svg" onclick="showmenu()"></span>
+          <img id="park" src="../ecommerce-product-page-main/images/logo.svg" alt="">
+           <ul id="sark">
+            <img src="../ecommerce-product-page-main/images/icon-close.svg"style="float:right;"onclick="hide1()" id="hide">
+
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+
+            </ul>
+        </div>
+        <div class="head3">
+          <img onclick="show1();" src="../ecommerce-product-page-main/images/icon-cart.svg"style="margin-top:16px;margin-right:0px; height: 20px;width:19px;color: white;">
+          <span id="notif">3</span>
+
+         <img id="smg" src="../ecommerce-product-page-main/images/image-avatar.png"alt="">
+        </div>
+      </div>
+      <hr id="hr"/>
+   </header>
+
+
+
+
+
+<section id="section">
+   <div id="disp">
+      <img id="display" src="../ecommerce-product-page-main/images/image-product-1.jpg" style="height:405px;" onclick="show()">
+      <div id="prevnext">
+        <div id="previous" class="previous"style="float:left;"onclick="prev1()"> <img class="img4" src="../ecommerce-product-page-main/images/icon-previous.svg"style="vertical-align: middle;"></div>
+        <div id="next" class="previous" onclick="next1()"><img class="img4" src="../ecommerce-product-page-main/images/icon-next.svg" style="vertical-align: middle;"></div>
+      </div>
+      <div id="preview">
+        <img class="img" src="../ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" onclick="change1()" >
+        <img class="img" src="../ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" onclick="change2()" >
+        <img class="img" src="../ecommerce-product-page-main/images/image-product-3-thumbnail.jpg" onclick="change3()" >
+        <img class="img" src="../ecommerce-product-page-main/images/image-product-4-thumbnail.jpg" onclick="change4()" >
+      </div>
+
+    </div>
+    <div id="sneakers">
+      <h4>Sneaker Company</h4>
+
+      <h1>Fall Limited Edition <br> Sneakers</h1>
+
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <br>
+
+
+
+      <div id="sap">
+
+          <span id="span">$125.00 </span>
+          <button type="button" id="btn">50%</button>
+
+
+        <div id="span2">$250.00</div>
+        </div>
+        <br><br>
+        <div id="sap2">
+
+        <div id="btn1">
+            <button id="img1"><img  src="../ecommerce-product-page-main/images/icon-minus.svg" onclick="minus()"></button>
+            <input type="input" id="input1" placeholder="0">
+            <button id="img2" onclick="add()"><img  src="../ecommerce-product-page-main/images/icon-plus.svg"></button>
+          </div>
+          <button onclick="checkout()" type="submit" id="btn2"><img src="../ecommerce-product-page-main/images/icon-cart.svg" style="margin-top:2px;margin-right:10px; margin-left: -10px; height: 12px;width:15px;color: white;"> Add to cart</button>
+        </div>
+    </div>
+  </section>
+  <div id="show1">
+    <div id="show">
+      <img src="../ecommerce-product-page-main/images/icon-close.svg"style="float:right;"onclick="hide()">
+      <div id="previous" class="previous"style="float:left;"onclick="prev()"> <img class="img4" src="../ecommerce-product-page-main/images/icon-previous.svg"style="vertical-align: middle;"></div>
+      <div id="next" class="previous" style="float:right ;" onclick="next()"><img class="img4" src="../ecommerce-product-page-main/images/icon-next.svg" style="vertical-align: middle;"></div>
+      <div id="wrap" >
+        <img id="display1" src="../ecommerce-product-page-main/images/image-product-1.jpg" style="height:500px;border-radius: 1em;">
+      </div>
+
+        <div id="preview" style>
+          <img class="img" src="../ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" onclick="change11()" >
+          <img class="img" src="../ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" onclick="change21()" >
+          <img class="img" src="../ecommerce-product-page-main/images/image-product-3-thumbnail.jpg" onclick="change31()" >
+          <img class="img" src="../ecommerce-product-page-main/images/image-product-4-thumbnail.jpg" onclick="change41()" >
+        </div>
+
+    </div>
+ </div>
+ <div id="show2">
+    <p style="margin-left:20px;padding: 8px;">Cart</p>
+
+      <hr/>
+      <div id="cartwrap">
+        <p id="cart1">your cart is empty</p>
+      </div>
+ </div>
+
+
+
+<script>
+  var setIm = document.getElementById("display1");
+  var images = [
+  "../ecommerce-product-page-main/images/image-product-1.jpg",
+  "../ecommerce-product-page-main/images/image-product-2.jpg",
+  "../ecommerce-product-page-main/images/image-product-3.jpg",
+  "../ecommerce-product-page-main/images/image-product-4.jpg",
+
+  ];
+  var setIm = document.getElementById("display");
+  var images = [
+  "../ecommerce-product-page-main/images/image-product-1.jpg",
+  "../ecommerce-product-page-main/images/image-product-2.jpg",
+  "../ecommerce-product-page-main/images/image-product-3.jpg",
+  "../ecommerce-product-page-main/images/image-product-4.jpg",
+
+  ];
+  var imgCounter = 0;
+  var i = 0;
+
+
+  var showw = document.getElementById("show1");
+  var sarks = document.getElementById("sark");
+  var data = 0;
+  function toggle () {
+    document.getElementsByClassName("img").style.border.color = "black";
+  }
+  function change1 () {
+    document.getElementById('display').src = "../ecommerce-product-page-main/images/image-product-1.jpg"
+  }
+  function change2 () {
+    document.getElementById('display').src = "../ecommerce-product-page-main/images/image-product-2.jpg"
+  }
+  function change3 () {
+    document.getElementById('display').src = "../ecommerce-product-page-main/images/image-product-3.jpg"
+  }
+   function change4 () {
+    document.getElementById('display').src = "../ecommerce-product-page-main/images/image-product-4.jpg"
+  }
+// the hidden element function
+  function change11 () {
+    document.getElementById('display1').src = "../ecommerce-product-page-main/images/image-product-1.jpg"
+  }
+  function change21 () {
+    document.getElementById('display1').src = "../ecommerce-product-page-main/images/image-product-2.jpg"
+  }
+  function change31 () {
+    document.getElementById('display1').src = "../ecommerce-product-page-main/images/image-product-3.jpg"
+  }
+   function change41 () {
+    document.getElementById('display1').src = "../ecommerce-product-page-main/images/image-product-4.jpg"
+  }
+// hidden elemt wheel
+
+  function next () {
+
+   var imgC = document.getElementById("display1");
+    imgCounter++;
+    if (imgCounter >= images.length) {
+     imgCounter= 0;
+    }
+    imgC.src = images[imgCounter];
+
+  }
+  function next1 () {
+
+var imgC = document.getElementById("display");
+ imgCounter++;
+ if (imgCounter >= images.length) {
+  imgCounter= 0;
+ }
+ imgC.src = images[imgCounter];
+
+}
+  function prev () {
+     var imgC = document.getElementById("display1");
+     imgCounter--;
+     if (imgCounter < 0) {
+    imgCounter= images.length-1;
+    }
+    imgC.src = images[imgCounter];
+
+}
+function prev1 () {
+     var imgC = document.getElementById("display");
+     imgCounter--;
+     if (imgCounter < 0) {
+    imgCounter= images.length-1;
+    }
+    imgC.src = images[imgCounter];
+
+}
+
+  function show () {
+
+      document.getElementById('show1').style.visibility = "visible";
+    }
+  window.onclick = function(event) {
+  if (event.target == showw) {
+    showw.style.visibility = "hidden";
+  }
+}
+function show1 () {
+    var visib = document.getElementById('show2');
+    if (visib.style.visibility == "visible") {
+    visib.style.visibility = "hidden";
+  }
+  else {
+    visib.style.visibility = "visible";
+  }
+
+  }
+  function showmenu () {
+    var visib = document.getElementById('sark');
+    if (visib.style.display == "flex") {
+    visib.style.display = "none";
+  }
+  else {
+    visib.style.display = "flex";
+  };
+
+}
+
+  function hide1 () {
+  document.getElementById('sark').style.display = "none";
+  }
+
+
+
+function hide () {
+  document.getElementById('show1').style.visibility = "hidden";
+
+}
+
+
+  // function for adding value to the product counter
+  function add () {
+
+     data = data + 1;
+    document.getElementById('input1').value = data;
+
+  }
+  function minus () {
+    if (data == 0) {
+      data = data;
+    } else {
+      data = data - 1;
+    }
+    document.getElementById('input1').value = data;
+  }
+  function checkout () {
+   var sett = document.getElementById('input1').value;
+   var sett1 = 125 * sett;
+   var sett3 = "$" + sett1 + ".00"
+   var sett2 = "<img src= '../ecommerce-product-page-main/images/image-product-1-thumbnail.jpg' id='secondimg'>" + "<span id='post'>" + "Fall Limited Edition Sneakers" +"</span>" + "<img src= '../ecommerce-product-page-main/images/icon-delete.svg' id='secondimgs'onclick='del();' >" + "<br>" + "<span id='post1'>" + "$125.00" + " " + "*" + " " + sett + "   " + "</span>" + "<span id='post2'>" + sett3 + "</span>" + "<button id='btnx'>" + "checkout" + "</button>"
+   if (sett <= 0){
+    document.getElementById('cart1').innerHTML = "your cart is empty";
+   }
+   else {
+   document.getElementById('cart1').innerHTML = sett2;
+   document.getElementById('cart1').style.textAlign = "left";
+   document.getElementById('cart1').style.marginTop = "0";
+   document.getElementById('cart1').style.marginLeft = "0";
+   document.getElementById('show2').style.visibility = "visible";
+   }
+   if (sett <= 0) {
+    document.getElementById('notif').style.visibility = "hidden";
+   }
+   else {
+    document.getElementById('notif').style.visibility = "visible";
+    document.getElementById('notif').innerHTML = sett;
+   }
+  }
+  function del () {
+   document.getElementById('cart1').innerHTML = "your cart is empty";
+   document.getElementById('notif').style.visibility = "hidden";
+  //  document.getElementById('cart1').style.marginLeft = "35%";
+   document.getElementById('cart1').style.textAlign = "center";
+   document.getElementById('cart1').style.marginTop = "15%";
+}
+
+</script>
+</body>
+</html>
